@@ -1,23 +1,143 @@
-const greeting = (name) => alert('Hello' + name);
+let btnAdd = document.querySelector('#submit');
+//let p1 = document.querySelector('#p');
 
-const processUserInput = (callback) => {
-    const name = prompt('type your name:');
-    callback(name);
+
+const createNumbers = () => {
+
+
+    
+
+//4 números pares 2 números ímpares
+    const evenNumberFour = [];
+    const oddNumberTwo = [];
+
+//2 números pares 4 números ímpares
+    const evenNumberTwo = [];
+    const oddNumberFour = [];
+    
+
+} 
+
+const createRandomNumbers = () => Math.floor(Math.random() * 60) + 1;
+
+//6 número aleatórios
+const createSixNumber = () => {  
+
+    const SixNumber = [];
+    while (SixNumber.length < 6) {
+        const number = createRandomNumbers();
+        if (number % 2 === 0 && !SixNumber.includes(number)) {
+            SixNumber.push(number);
+        }
+    }
+
+    const result = SixNumber;
+    p.textContent = result;
 }
 
+//3 números pares 3 números ímpares
+const createThreeThree = () => {
 
-processUserInput
+    const evenNumberThree = [];
+    const oddNumberThree = [];
 
-const number = 2;
+    while (evenNumberThree.length < 3) {
+        const number = createRandomNumbers();
+        if (number % 2 === 0 && !evenNumberThree.includes(number)) {
+            evenNumberThree.push(number);
+        }
+    }
 
-const randonNumber = (min, max) => {
-    return Math.round(Math.random() * (max - min) + min);// retorna um número aleatório maior que zero e meno que 1
+    while (oddNumberThree.length < 3) {
+        const number = createRandomNumbers();
+        if (number % 2 !== 0 && !oddNumberThree.includes(number)) {
+            oddNumberThree.push(number);
+        }
+    }
+
+
+    const result1 = [...evenNumberThree, ...oddNumberThree];
+    p1.textContent = result1;
 
 }
+/*
 
-console.log(randonNumber(2, 10))
+//3 números pares 3 números ímpares
+    while (evenNumberThree.length < 3) {
+        const number = createRandomNumbers();
+        if (number % 2 === 0 && !evenNumberThree.includes(number)) {
+            evenNumberThree.push(number);
+        }
+    }
 
-//Eu tenho uma lista de números de 1 à 60 e preciso que seja sorteado 6 números, porém tem que ser 3 números impares e três números pares. Pode gerar um algoritmo usando javaScript coma função  Math.random()   
+    while (oddNumberThree.length < 3) {
+        const number = createRandomNumbers();
+        if (number % 2 !== 0 && !oddNumberThree.includes(number)) {
+            oddNumberThree.push(number);
+        }
+    }
+
+
+    const result1 = [...evenNumberThree, ...oddNumberThree];
+    p1.textContent = result1;
+
+
+
+    
+    //4 números pares 2 números ímpares
+    while (evenNumberFour.length < 4) {
+        const number = createRandomNumbers();
+        if (number % 2 === 0 && !evenNumberFour.includes(number)) {
+            evenNumberFour.push(number);
+        }
+      }
+      
+      while (oddNumberTwo.length < 2) {
+        const number = createRandomNumbers();
+        if (number % 2 !== 0 && !oddNumberTwo.includes(number)) {
+            oddNumberTwo.push(number);
+        }
+      }
+      
+      
+      const result2 = [...evenNumberFour, ...oddNumberTwo];
+      p1.textContent = result2;
+      
+    
+
+
+    //2 números pares 4 números ímpares
+    
+    while (evenNumberTwo.length < 2) {
+        const number = createRandomNumbers();
+        if (number % 2 === 0 && !evenNumberTwo.includes(number)) {
+            evenNumberTwo.push(number);
+        }
+    }
+    
+    while (oddNumberFour.length < 4) {
+        const number = createRandomNumbers();
+        if (number % 2 !== 0 && !oddNumberFour.includes(number)) {
+            oddNumberFour.push(number);
+        }
+    }
+    
+    
+    const result3 = [...evenNumberTwo, ...oddNumberFour];
+    p1.textContent = result3;
+    
+   
+
+
+
+}
+*/
+btnAdd.addEventListener('click', createSixNumber);
+
+
+
+
+
 
 
 
@@ -51,10 +171,10 @@ function gerarNumeros() {
     }
 
     // Combina pares e ímpares
-    const resultado = [...pares, ...impares];
+    const result1ado = [...pares, ...impares];
 
     // Embaralha os números para garantir que não fiquem ordenados
-    return resultado.sort(() => Math.random() - 0.5);
+    return result1ado.sort(() => Math.random() - 0.5);
 }
 
 // Exibe os números sorteados
