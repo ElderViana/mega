@@ -8,37 +8,150 @@
         <title>Curso de JavaScrit avançado</title>
     </head>
     <body>
-        <header>Gerar números aleatórios</header>
+        <header>
+            <h1>Gerar números aleatórios</h1>
+        </header>
         <div>
             <p>Mega Sena</p>
-            <!--   
-            <input type="checkbox" class="check" input class="input" class="input" id="threeThree">Gerar 3 números pares e 3 números ímpares (30.74%)
-            <input type="checkbox" class="check" input class="input" class="input" id="fourTwo">Gerar 4 números pares e 2 números ímpares (24.34%)
-            <input type="checkbox" class="check" input class="input" class="input" id="twoFour">Gerar 2 números pares e 4 números ímpares (24.25%)
-             -->
-            <div> 
-                <p id="p"></p>
-                <input type="submit" value="Gerar 6 números aleatórios" class="bitnAdd" id="submit">
+            <div class="combobox">
+                <div class="father">
+                    <div class="child" id="pFather">
+                      <div class="pChild" id="a">
+                            <p id="p1"></p>
+                        </div>
+                        <div class="pChild"  id="b">
+                            <p id="p2"></p>
+                        </div>
+                        <div class="pChild" id="c">
+                            <p id="p3"></p>
+                        </div>
+                        <div class="pChild" id="d">
+                            <p id="p4"></p>
+                        </div>
+                        <div class="pChild" id="e">
+                            <p id="p5"></p>
+                        </div>
+                        <div class="pChild" id="f">
+                            <p id="p6"></p>
+                        </div>
+                      </div>
+                    <div class="child">
+                        <select name="marker" id="selectFilter">
+                            <option value="" disabled selected>Adicionar Filtro</option>
+                            <option value="threeThree" >Gerar 3 números pares e 3 números ímpares (30.74%)</option>
+                            <option value="fourTwo" >Gerar 4 números pares e 2 números ímpares (24.34%)</option>
+                            <option value="twoFour" >Gerar 2 números pares e 4 números ímpares (24.25%)</option>
+                        </select>
+                    </div>
+                    <div class="child">
+                        <input type="submit" value="Gerar" class="btnAdd" id="submit">
+                    </div>
+                </div>
             </div>
-            <div>
-                <p id="p1"></p>
-                <input type="submit" value="Gerar 3 números pares e 3 números ímpares (30.74%)" class="bitnAdd" id="submit1">
-            </div>
-            <div> 
-                <p id="p2"></p>
-                <input type="submit" value="Gerar 4 números pares e 2 números ímpares (24.34%)" class="bitnAdd" id="submit2">
-            </div>
-            <div>
-                <p id="p3"></p>
-                <input type="submit" value="Gerar 2 números pares e 4 números ímpares (24.25%)" class="bitnAdd" id="submit3">
+            <p>Loto fácil</p>
+            <div class="combobox">
+                <div class="father">
+                    <div class="child" id="pFather2">
+                        <!-- 
+                        <div class="pChild" id="g">
+                            <p id="p7"></p>
+                        </div>
+                        <div class="pChild"  id="h">
+                            <p id="p8"></p>
+                        </div>
+                        <div class="pChild" id="i">
+                            <p id="p9"></p>
+                        </div>
+                        <div class="pChild" id="j">
+                            <p id="p10"></p>
+                        </div>
+                        <div class="pChild" id="k">
+                            <p id="p11"></p>
+                        </div>
+                        <div class="pChild" id="l">
+                            <p id="p12"></p>
+                        </div>
+                        <div class="pChild" id="m">
+                            <p id="p13"></p>
+                        </div>
+                        <div class="pChild"  id="n">
+                            <p id="p14"></p>
+                        </div>
+                        <div class="pChild" id="o">
+                            <p id="p15"></p>
+                        </div>
+                        <div class="pChild" id="p">
+                            <p id="p16"></p>
+                        </div>
+                        <div class="pChild" id="q">
+                            <p id="p17"></p>
+                        </div>
+                        <div class="pChild" id="r">
+                            <p id="p18"></p>
+                        </div>
+                        <div class="pChild" id="s">
+                            <p id="p19"></p>
+                        </div>
+                        <div class="pChild" id="t">
+                            <p id="p20"></p>
+                        </div>
+                        <div class="pChild" id="u">
+                            <p id="p21"></p>
+                        </div>
+                          -->
+                    </div>
+                    <div class="child">
+                        <select name="marker" id="selectFilter2">
+                            <option value="" disabled selected>Adicionar Filtro</option>
+                            <option value="threeThree" >Gerar 7 números pares e 8 números ímpares (30.84%)</option>
+                            <option value="fourTwo" >Gerar 8 números pares e 7 números ímpares (25.45%)</option>
+                            <option value="twoFour" >Gerar 6 números pares e 9 números ímpares (20.67%)</option>
+                        </select>
+                    </div>
+                    <div class="child">
+                        <input type="submit" value="Gerar" class="btnAdd" id="submit2">
+                    </div>
+                </div>
             </div>
         </div>
-
-
-
-
-
-
     </body>
 <script src="js/script.js"></script>
 </html>
+
+
+
+
+
+
+
+<!--   
+
+<div> 
+    <input type="checkbox" class="check" input class="input" class="input" id="threeThree">Gerar 3 números pares e 3 números ímpares (30.74%)
+</div>
+<div> 
+    <input type="checkbox" class="check" input class="input" class="input" id="fourTwo">Gerar 4 números pares e 2 números ímpares (24.34%)
+</div>
+<div>
+    <input type="checkbox" class="check" input class="input" class="input" id="twoFour">Gerar 2 números pares e 4 números ímpares (24.25%)
+</div>
+
+
+
+<div> 
+    <p id="p1"></p>
+    <input type="submit" value="Gerar 6 números aleatórios" class="bitnAdd" id="submit1">
+</div>
+<div>
+    <p id="p2"></p>
+    <input type="submit" value="Gerar 3 números pares e 3 números ímpares (30.74%)" class="bitnAdd" id="submit2">
+</div>
+<div> 
+    <p id="p3"></p>
+    <input type="submit" value="Gerar 4 números pares e 2 números ímpares (24.34%)" class="bitnAdd" id="submit3">
+</div>
+<div>
+    <p id="p4"></p>
+    <input type="submit" value="Gerar 2 números pares e 4 números ímpares (24.25%)" class="bitnAdd" id="submit4">
+</div>
+-->
