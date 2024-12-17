@@ -16,6 +16,7 @@ const f = document.getElementById('f');
 
 const listP = [p1, p2, p3, p4, p5, p6];
 const listDiv = [a, b, c, d, e, f];
+console.log(listDiv)
 
 const submit = document.getElementById('submit');
 const div = document.getElementById('a');
@@ -164,46 +165,34 @@ let p19 = document.getElementById('p19');
 let p20 = document.getElementById('p20');
 let p21 = document.getElementById('p21');
 
-const g = document.getElementById('g');
-const h = document.getElementById('h');
-const i = document.getElementById('i');
-const j = document.getElementById('j');
-const k = document.getElementById('k');
+let g = document.getElementById('g');
+let h = document.getElementById('h');
+let i = document.getElementById('i');
+let j = document.getElementById('j');
+let k = document.getElementById('k');
 
-const l = document.getElementById('l');
-const l = document.getElementById('l');
-const g = document.getElementById('g');
-const h = document.getElementById('h');
-const i = document.getElementById('i');
+let l = document.getElementById('l');
+let m = document.getElementById('m');
+let n = document.getElementById('n');
+let o = document.getElementById('o');
+let p = document.getElementById('p');
 
-const j = document.getElementById('j');
-const k = document.getElementById('k');
-const l = document.getElementById('l');
-const l = document.getElementById('l');
-const l = document.getElementById('l');
+let q = document.getElementById('q');
+let r = document.getElementById('r');
+let s = document.getElementById('s');
+let t = document.getElementById('t');
+let u = document.getElementById('u');
 
 
 
-const listDiv2 = [];
-const listP2 = [];
+let listDiv2 = [g, h, i, j, k, l, m, n, o, p, q, r, s, t, u];
+let listP2 = [p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21];
+console.log(listDiv2)
+
+
 
 const createRandomNumbers2 = () => Math.floor(Math.random() * 25) + 1;
-   /*
-for(i = 1; i <= 15; i++){
 
-    let div = document.createElement('div');
-    let p = document.createElement('p');
-    div.id = 'd' + i;
-    div.style.backgroundColor = '#38bd72';
-    listDiv2.push(div.id);
-    p.id = 'p' + i;
-    p.textContent = 'r'
-    listP2.push(p.id);
-    
-    divFather2.appendChild(div);
-    div.appendChild(p);
-}
-    */
 const createNumbers2 = () => {
 
     switch(selectFilter2.value){
@@ -211,43 +200,23 @@ const createNumbers2 = () => {
         case '':
            
         //Criar 15 números aleatórios
-        const fifteenNumbers = [];
-
+        let fifteenNumbers = [];
         while (fifteenNumbers.length < 15){
 
-            const number = createRandomNumbers2();
+            let number = createRandomNumbers2();
             if(!fifteenNumbers.includes(number)){
                 fifteenNumbers.push(number);
             }
         }
        
-        const result1 = fifteenNumbers;
-        console.log(result1)
-       
- 
-
-        for(i = 0; i <= fifteenNumbers.length; i++){
-
-            var div = document.createElement('div');
-            let p = document.createElement('p');
-            div.style.backgroundColor = '#38bd72';
-           
-            div.style.padding =  '10px';
-            div.style.border.radius = '80%';
-            div.class = 'pChild';
-            p.textContent = result1[i];
-     
-            listP2.push(p.id);
-            
-            divFather2.appendChild(div);
-            div.appendChild(p);
-            
+        let result1 = fifteenNumbers;
+        for(i = 0; i < fifteenNumbers.length; i++){
+            listDiv2[i].style.backgroundColor = '#d629d6	';
+            console.log(listDiv2[i])
+            listP2[i].textContent = result1[i];
+            console.log(listP2[i])
         }
-    
         break;
-
-
-      
 
         //7 números pares 8 números ímpares
         //8 números pares 7 números ímpares
@@ -262,8 +231,7 @@ const createNumbers2 = () => {
 
 }
 
-console.log(div.class)
-    
+
 
 
 
