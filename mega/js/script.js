@@ -1,4 +1,7 @@
+
+const submit = document.getElementById('submit');
 const selectFilter = document.getElementById('selectFilter');
+
 let p1 = document.getElementById('p1');
 let p2 = document.getElementById('p2');
 let p3 = document.getElementById('p3');
@@ -16,10 +19,9 @@ const f = document.getElementById('f');
 
 const listP = [p1, p2, p3, p4, p5, p6];
 const listDiv = [a, b, c, d, e, f];
-console.log(listDiv)
 
-const submit = document.getElementById('submit');
-const div = document.getElementById('a');
+
+
 
 
 const createRandomNumbers = () => Math.floor(Math.random() * 60) + 1;
@@ -218,25 +220,128 @@ const createNumbers2 = () => {
         }
         break;
 
+        //7 números ímpares 8 números pares
+         case  'sevenEight':  
+         const oddNumberSeven = [];            
+         const evenNumberEight = [];
+         const listNumber1 = [];
+     
+         while (oddNumberSeven.length < 7) {
+             let number = createRandomNumbers2();
+             if (number % 2 !== 0 && !oddNumberSeven.includes(number)) {
+                oddNumberSeven.push(number);
+                 listNumber1.push(number);
+             }
+         }
+     
+         while (evenNumberEight.length < 8) {
+             let number = createRandomNumbers2();
+             if (number % 2 === 0 && !evenNumberEight.includes(number)) {
+                evenNumberEight.push(number);
+                 listNumber1.push(number);
+             }
+         }
+         const result2 = [...oddNumberSeven, ...evenNumberEight];
+
+         for(i = 0; i < listNumber1.length; i++){
+             listDiv2[i].style.backgroundColor = '#d629d6';
+             listP2[i].textContent = result2[i];
+          }
+         break;
+
+        
         //7 números pares 8 números ímpares
-        //8 números pares 7 números ímpares
+        case  'eightSeven':  
+        const evenNumberSeven = [];
+        const oddNumberEight = [];            
+        const listNumber2 = [];
+    
+        while (evenNumberSeven.length < 7) {
+            let number = createRandomNumbers2();
+            if (number % 2 === 0 && !evenNumberSeven.includes(number)) {
+                evenNumberSeven.push(number);
+                listNumber2.push(number);
+            }
+        }
+    
+        while (oddNumberEight.length < 8) {
+            let number = createRandomNumbers2();
+            if (number % 2 !== 0 && !oddNumberEight.includes(number)) {
+                oddNumberEight.push(number);
+                listNumber2.push(number);
+            }
+        }
+        const result3 = [...evenNumberSeven, ...oddNumberEight];
+
+        for(i = 0; i < listNumber2.length; i++){
+            listDiv2[i].style.backgroundColor = '#d629d6';
+            listP2[i].textContent = result3[i];
+         }
+        break;
+
         //6 pares 9 ímpares
+        case  'sixNine':  
+        const evenNumberSix = [];
+        const oddNumberNine = [];            
+        const listNumber4 = [];
+    
+        while (evenNumberSix.length < 6) {
+            let number = createRandomNumbers2();
+            if (number % 2 === 0 && !evenNumberSix.includes(number)) {
+                evenNumberSix.push(number);
+                listNumber4.push(number);
+            }
+        }
+    
+        while (oddNumberNine.length < 9) {
+            let number = createRandomNumbers2();
+            if (number % 2 !== 0 && !oddNumberNine.includes(number)) {
+                oddNumberNine.push(number);
+                listNumber4.push(number);
+            }
+        }
+        const result4 = [...evenNumberSix, ...oddNumberNine];
+
+        for(i = 0; i < listNumber4.length; i++){
+            listDiv2[i].style.backgroundColor = '#d629d6';
+            listP2[i].textContent = result4[i];
+         }
+        break;
     }
     
-
-
-
-
-
-
 }
 
-
-
-
-
-
 submit2.addEventListener('click', createNumbers2);
+
+
+const submit3 = document.getElementById('submit3');
+const divFather3 = document.getElementById("pFather3");
+const selectFilter3 = document.getElementById("selectFilter3");
+
+let p1a = document.getElementById('p1a');
+let p2b = document.getElementById('p2b');
+let p3c = document.getElementById('p3c');
+let p4d = document.getElementById('p4d');
+let p5e = document.getElementById('p5e');
+let p6f = document.getElementById('p6f');
+let p7g = document.getElementById('p7g');
+
+const a1 = document.getElementById('a1');
+const b2 = document.getElementById('b2');
+const c3 = document.getElementById('c3');
+const d4 = document.getElementById('d4');
+const e5 = document.getElementById('e5');
+const f6 = document.getElementById('f6');
+const g7 = document.getElementById('g7');
+
+
+const listP3 = [p1a, p2b, p3c, p4d, p5e, p6f, p7g];
+const listDiv3 = [a1, b2, c3, d4, e5, f6, g7];
+const months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+
+
+const createRandomNumbers3 = () => Math.floor(Math.random() * 31) + 1;
+
 
 
 
