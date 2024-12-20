@@ -22,11 +22,9 @@ p {
     text-align: center;
 }
 
-#pLoto {
+#pLoto, #pSorte {
     margin-top: 60px;
 }
-
-
 
 
 .father {
@@ -60,7 +58,7 @@ select {
     border-radius: 20px;
 }
 
-#pFather,  #pFather2 {
+#pFather,  #pFather2, #pFather3 {
     display: flex;
     justify-content: space-between;
     width: 35%;
@@ -68,6 +66,16 @@ select {
   
  
 }
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+    margin-top: 10px;
+    margin-left: 305px;
+
+}
+
 
 .pChild {
 
