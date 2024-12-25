@@ -5,6 +5,7 @@
   
 }
 
+
 h1 {
     font-size: 30px;
     text-align: center;
@@ -27,7 +28,7 @@ p {
 }
 
 
-.father {
+.father, .father2, .father9  {
     display: flex;
     justify-content: space-between;
     width: 60%;
@@ -35,6 +36,7 @@ p {
     margin-top: 50px;
    
 }
+
 
 .combobox {
 
@@ -53,12 +55,13 @@ select {
 }
 
 
+
 .btnAdd {
     padding: 5px 20px 5px 20px;
     border-radius: 20px;
 }
 
-#pFather,  #pFather2, #pFather3 {
+#pFather,  #pFather2, #pFather3, #pFather4 {
     display: flex;
     justify-content: space-between;
     width: 35%;
@@ -66,6 +69,8 @@ select {
   
  
 }
+
+
 
 .month {
     display: flex;
@@ -77,12 +82,14 @@ select {
 }
 
 
-.pChild {
+.pChild, .div-child {
 
     border-radius: 80%;
     padding: 10px;
+  
     
 }
+
 
 
 .pChild2 {
@@ -95,4 +102,68 @@ select {
 
 #pFather2 {
     width: 100%;
+   
 }
+
+.div-child {
+    background-color: #1cf87b;
+    border: 1px solid black;
+    
+    margin: 5px 5px 5px 5px;
+
+}
+
+.number-text {
+    font-size: 50px;
+}
+
+.number-text {
+
+    font-size: 20px;
+}
+
+#divFather {
+display: flex;;
+height: auto;
+flex-Wrap: wrap;
+width: 70%;
+justify-content: flex-start;
+margin-left: 100px;
+border-radius: 10px;
+box-shadow: 0 4px 8px 0 #8b8a8a, 0 6px 20px 0 #5e5c5c;
+
+
+}
+
+.child2 {
+    margin-left: 250px;
+
+}
+
+#idFather2 {
+margin-left: 400px;
+align-items: center;
+width: 2%;
+margin-bottom: 10px;
+
+
+}
+
+#pFather4 {
+
+ 
+}
+
+.father9 {
+    margin-top: 5px;
+ 
+}
+
+#submit11 {
+    margin-top: 5px;
+}
+
+#selectFilter11 {
+    margin-right: 5px;
+}
+
