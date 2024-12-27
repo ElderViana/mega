@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  
+   
 }
 
 
@@ -145,7 +145,7 @@ margin-left: 400px;
 align-items: center;
 width: 2%;
 margin-bottom: 10px;
-
+background-color: blue;
 
 }
 
@@ -167,3 +167,13 @@ margin-bottom: 10px;
     margin-right: 5px;
 }
 
+h2 {
+    text-align: center;
+}
+
+.divH2 {
+    /*background-image: linear-gradient(  45deg, #1cf87b 30%, #00CED1);*/
+    background-image: linear-gradient(45deg, #1cf87b 20%, #00CED1 80%);
+
+    box-shadow: 0 4px 8px 0 #8b8a8a, 0 6px 20px 0 #5e5c5c;
+}

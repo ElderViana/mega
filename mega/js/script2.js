@@ -47,17 +47,6 @@ const selectFilter = document.getElementById('selectFilter11');
 const pFather4 = document.getElementById('pFather4');
 
 
-
-
-
-
-let listFilter = [];
-let listFilter2 = JSON.parse(localStorage.getItem('listFilter'))
-localStorage.setItem('listFilter', JSON.stringify(listFilter));
-
-console.log(listFilter2)
-
-
 const listP2 = [];
 const listDiv2 = [];
 
@@ -112,11 +101,15 @@ const createNumbers = () => {
     document.querySelector('#submit11').removeEventListener('click', createNumbers);
     document.querySelector('#submit11').addEventListener('click', clean);
 
-    listFilter.push(selectFilter.value);
+   let selectFilter3 = selectFilter.value
+   localStorage.setItem('selectFilter', JSON.stringify(selectFilter3));
+
+
+   
     switch(selectFilter.value){
 
         //6 númeroa aleatórios
-        case '':                           
+        case '' || 'sixNumber':                           
             const SixNumber = [];
             while (SixNumber.length < 6) {
 
@@ -322,11 +315,30 @@ const createNumbers = () => {
  
         
     }
+    const select = () => {
+            document.getElementById('selectFilter11').value =  JSON.parse(localStorage.getItem('selectFilter'));
+        
+            
+        
+    
+    }
+
+
+
+
+
 
 
     const init = () => {
         document.querySelector('#submit11').addEventListener('click', createNumbers);
+        select();
            
     }
 
     init()
+
+    let selectFilter2 = JSON.parse(localStorage.getItem('selectFilter'));
+
+    console.log(selectFilter2);
+
+    
