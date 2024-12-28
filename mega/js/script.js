@@ -189,9 +189,6 @@ let u = document.getElementById('u');
 
 let listDiv2 = [g, h, i, j, k, l, m, n, o, p, q, r, s, t, u];
 let listP2 = [p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21];
-console.log(listDiv2)
-
-
 
 const createRandomNumbers2 = () => Math.floor(Math.random() * 25) + 1;
 

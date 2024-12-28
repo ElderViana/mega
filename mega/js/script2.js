@@ -1,3 +1,6 @@
+
+//Mega sena
+
 const divFather = document.getElementById('divFather');
 
 let listNumberOne = [];
@@ -39,7 +42,7 @@ const createGame = () => {
     }
 };
 
-createGame();
+
 
         
 //const submit = document.getElementById('submit11');
@@ -76,8 +79,6 @@ const createElements = () => {
 
 
 }
-
-createElements()
 
 
 const createRandomNumbers = () => Math.floor(Math.random() * 60) + 1;
@@ -310,35 +311,257 @@ const createNumbers = () => {
         break;
 
         }
+}
 
 
- 
+
+
+//Loto fácil
+
+const divFather7 = document.getElementById('divFather7');
+
+let listNumberTwo = [];
+let listDiv7 = [];
+
+const createGame7 = () => {
+    if (!divFather7) {
+        console.error("O elemento 'divFather' não foi encontrado no DOM.");
+        return;
+    }
+
+    for (let i = 1; i <= 25; i++) {
+        
+        const divChild7 = document.createElement('div');
+        const p7 = document.createElement('p');
+
+        if(i < 10){
+            p7.textContent =  '0' + i;
+          
+        }
+        if(i >= 10){
+            p7.textContent = i;
+      
+        }
+        
+        divChild7.className = 'div-child7';
+        p7.className = 'number-text';
+        divChild7.id = 'd' + i;
+
+        listDiv7.push(divChild7);
+
+        divChild7.appendChild(p7);
+        divFather7.appendChild(divChild7);
+
+        listNumberTwo.push(i);
+     
+    }
+};
+
+
+
+       
+
+const selectFilter7 = document.getElementById('selectFilter7');
+const pFather7 = document.getElementById('pFather7');
+
+
+const listP7 = [];
+const listDiv72 = [];
+
+
+const createElements7 = () => {
+
+    for( i = 1; i <= 15; i++){
+
+        const pChild7 = document.createElement('div');
+        const p7 = document.createElement('p7');
+
+        pChild7.className = 'pChild';
+        pChild7.id = 'l' + i;
+     
+        listDiv72.push(pChild7);
+
+        p7.id = 'l' + i;
+        listP7.push(p7);
+
+        pChild7.appendChild(p7);
+        pFather7.appendChild(pChild7);
+
+    }
+
+}
+
+const createRandomNumbers2 = () => Math.floor(Math.random() * 25) + 1;
+
+const createNumbers2 = () => {
+
+    let submit7 = document.querySelector('#submit7');
+    submit7.value = "Limpar";
+
+
+    const clean = (event) => {
+        
+        submit7.value = 'Gerar';
+        document.querySelector('#submit7').removeEventListener('click', clean);
+        document.querySelector('#submit7').addEventListener('click', createNumbers2);
+   
+        location.reload()
         
     }
-    const select = () => {
-            document.getElementById('selectFilter11').value =  JSON.parse(localStorage.getItem('selectFilter'));
-        
-            
-        
-    
-    }
+    document.querySelector('#submit7').removeEventListener('click', createNumbers2);
+    document.querySelector('#submit7').addEventListener('click', clean);
 
 
+   let selectFilter4 = selectFilter7.value
+   localStorage.setItem('selectFilter7', JSON.stringify(selectFilter4));
 
-
-
-
-
-    const init = () => {
-        document.querySelector('#submit11').addEventListener('click', createNumbers);
-        select();
+    switch(selectFilter7.value){
+       
+        case '' || 'fifteen':
            
+        //Criar 15 números aleatórios
+        let fifteenNumbers = [];
+        while (fifteenNumbers.length < 15){
+
+            let number = createRandomNumbers2();
+            if(!fifteenNumbers.includes(number)){
+                fifteenNumbers.push(number);
+            }
+        }
+       
+        let result1 = fifteenNumbers;
+        for(i = 0; i < fifteenNumbers.length; i++){
+
+            listDiv72[i].style.backgroundColor = '#e6aecb';
+            listDiv72[i].style.border = '1px solid black';
+         
+
+            if(result1[i] < 10){
+                listP7[i].textContent = '0' + result1[i];
+            }
+
+            if(result1[i] >= 10){
+                listP7[i].textContent = result1[i];
+
+            }
+        
+        }
+
+        for(i = 0; i <= 25; i++){
+
+            for(a = 0; a <= 25; a++){
+                if(result1[i] == listNumberTwo[a]){
+                    listDiv7[a].style.backgroundColor = '#d629d6';
+                }
+        
+            }
+                
+        }
+        break;
+
+        //7 números ímpares 8 números pares
+        case  'sevenEight':
+
+            const oddNumberSeven = [];            
+            const evenNumberEight = [];
+            const listNumber1 = [];
+        
+            while (oddNumberSeven.length < 7) {
+                let number = createRandomNumbers2();
+                if (number % 2 !== 0 && !oddNumberSeven.includes(number)) {
+                    oddNumberSeven.push(number);
+                    listNumber1.push(number);
+                }
+            }
+        
+            while (evenNumberEight.length < 8) {
+                let number = createRandomNumbers2();
+                if (number % 2 === 0 && !evenNumberEight.includes(number)) {
+                    evenNumberEight.push(number);
+                    listNumber1.push(number);
+                }
+            }
+            const result2 = [...oddNumberSeven, ...evenNumberEight];
+
+            for(i = 0; i < listNumber1.length; i++){
+                listDiv72[i].style.backgroundColor = '#e6aecb';
+                listDiv72[i].style.border = '1px solid black';
+
+                if(result2[i] < 10){
+                    listP7[i].textContent = '0' + result2[i];
+                }
+        
+                if(result2[i] >= 10){
+                    listP7[i].textContent = result2[i];
+        
+                }
+            }
+
+            for(i = 0; i <= 25; i++){
+
+                for(a = 0; a <= 25; a++){
+                    if(result2[i] == listNumberTwo[a]){
+                        listDiv7[a].style.backgroundColor = '#e6aecb';
+                    }
+            
+                }
+                    
+            }
+          
+        break;
+
     }
+}
 
-    init()
 
-    let selectFilter2 = JSON.parse(localStorage.getItem('selectFilter'));
 
-    console.log(selectFilter2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const select = () => {
+     document.getElementById('selectFilter11').value =  JSON.parse(localStorage.getItem('selectFilter'));
+     document.getElementById('selectFilter7').value =  JSON.parse(localStorage.getItem('selectFilter7'));
+        
+}
+
+const init = () => {
+    document.querySelector('#submit11').addEventListener('click', createNumbers);
+    document.querySelector('#submit7').addEventListener('click', createNumbers2);
+    select();
+    createElements();
+    createGame();
+    createElements7();
+    createGame7();
+   
+           
+}
+
+init()
+
 
     
