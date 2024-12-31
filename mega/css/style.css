@@ -61,7 +61,7 @@ select {
     border-radius: 20px;
 }
 
-#pFather,  #pFather2, #pFather3, #pFather4, #pFather7 {
+#pFather,  #pFather2, #pFather3, #pFather4, #pFather7, #pFather8 {
     display: flex;
     justify-content: space-between;
     width: 35%;
@@ -72,7 +72,7 @@ select {
 
 #pFather7 {
     width: 100%;
-    height: auto;
+    height: auto;   
 }
 
 .month {
@@ -85,7 +85,7 @@ select {
 }
 
 
-.pChild, .div-child, .div-child7 {
+.pChild, .div-child, .div-child7, .div-child8 {
 
     border-radius: 80%;
     padding: 10px;
@@ -108,7 +108,7 @@ select {
    
 }
 
-.div-child, .div-child7 {
+.div-child, .div-child7, .div-child8 {
     background-color: #1cf87b;
     border: 1px solid black;
     
@@ -118,6 +118,9 @@ select {
 
 .div-child7 {
     background-color: #d629d6;
+}
+.div-child8 {
+    background-color: #DAA520;
 }
 
 .number-text {
@@ -129,7 +132,7 @@ select {
     font-size: 20px;
 }
 
-#divFather, #divFather7{
+#divFather, #divFather7, #divFather8{
 display: flex;;
 height: auto;
 flex-Wrap: wrap;
@@ -147,7 +150,7 @@ box-shadow: 0 4px 8px 0 #8b8a8a, 0 6px 20px 0 #5e5c5c;
 
 }
 
-#idFather2, #idFather7{
+#idFather2, #idFather7, #idFather8{
 margin-left: 400px;
 align-items: center;
 width: 2%;
@@ -189,7 +192,7 @@ h2 {
     box-shadow: 0 4px 8px 0 #8b8a8a, 0 6px 20px 0 #5e5c5c;
 }
 
-.divH7 {
+.divH7, .divH8 {
 
     background-image: linear-gradient(45deg,#FF1493 20%, #00CED1 80%);
 
