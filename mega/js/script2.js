@@ -794,7 +794,7 @@ const createNumbers3 = () => {
             const listNumber1 = [];
         
             while (evenNumberThree.length < 3) {
-                const number = createRandomNumbers3();
+                const number = createRandomNumbers8();
                 if (number % 2 === 0 && !evenNumberThree.includes(number)) {
                     evenNumberThree.push(number);
                     listNumber1.push(number);
@@ -802,7 +802,7 @@ const createNumbers3 = () => {
             }
         
             while (oddNumberFour.length < 4) {
-                const number = createRandomNumbers3();
+                const number = createRandomNumbers8();
                 if (number % 2 !== 0 && !oddNumberFour.includes(number)) {
                     oddNumberFour.push(number);
                     listNumber1.push(number);
@@ -812,8 +812,22 @@ const createNumbers3 = () => {
             const result2 = [...evenNumberThree, ...oddNumberFour];
 
             for(i = 0; i < listNumber1.length; i++){
-                listDiv3[i].style.backgroundColor = '#DAA520';
-                listP3[i].textContent = result2[i];
+                listDiv82[i].style.backgroundColor = '#FFDEAD';
+                listDiv82[i].style.border = '1px solid black';
+
+                listP8[i].textContent = result2[i];
+
+                      
+                if(result2[i] < 10){
+                    listP8[i].textContent = '0' + result2[i];
+                    
+                }
+
+                if(result2[i] >= 10){
+                    listP8[i].textContent = result2[i];
+                    
+
+                }
             }
 
             const resultNumberMonths2 = createRandomNumbersMonths();
@@ -822,6 +836,206 @@ const createNumbers3 = () => {
                 if(resultNumberMonths2 == monthsNumbers[i]){
                     pMonths.textContent = months[i];
                 }
+            }
+
+            for(i = 0; i <= 31; i++){
+
+                for(a = 0; a <= 31; a++){
+                    if(result2[i] == listNumberThree[a]){
+                        listDiv8[a].style.backgroundColor = '#FFDEAD';
+                    }
+            
+                }
+                    
+            }
+        break;
+
+        //Caso 4 pares e 3 ímpares
+        case 'fourThree':              
+            const evenNumberFour = [];
+            const oddNumberThree = [];
+            const listNumber2 = [];
+        
+            while (evenNumberFour.length < 3) {
+                const number = createRandomNumbers8();
+                if (number % 2 === 0 && !evenNumberFour.includes(number)) {
+                    evenNumberFour.push(number);
+                    listNumber2.push(number);
+                }
+            }
+        
+            while (oddNumberThree.length < 4) {
+                const number = createRandomNumbers8();
+                if (number % 2 !== 0 && !oddNumberThree.includes(number)) {
+                    oddNumberThree.push(number);
+                    listNumber2.push(number);
+                }
+            }
+
+            const result3 = [...evenNumberFour, ...oddNumberThree];
+
+            for(i = 0; i < listNumber2.length; i++){
+                listDiv82[i].style.backgroundColor = '#FFDEAD';
+                listDiv82[i].style.border = '1px solid black';
+
+                listP8[i].textContent = result3[i];
+
+                      
+                if(result3[i] < 10){
+                    listP8[i].textContent = '0' + result3[i];
+                    
+                }
+
+                if(result3[i] >= 10){
+                    listP8[i].textContent = result3[i];
+                    
+
+                }
+            }
+
+            const resultNumberMonths3 = createRandomNumbersMonths();
+
+            for(i = 0; i < 12; i++){
+                if(resultNumberMonths3 == monthsNumbers[i]){
+                    pMonths.textContent = months[i];
+                }
+            }
+
+            for(i = 0; i <= 31; i++){
+
+                for(a = 0; a <= 31; a++){
+                    if(result3[i] == listNumberThree[a]){
+                        listDiv8[a].style.backgroundColor = '#FFDEAD';
+                    }
+            
+                }
+                    
+            }
+        break;
+
+        //2 números pares 5 números ímpares
+        case 'twoFive':              
+            const evenNumberTwo = [];
+            const oddNumberFive = [];
+            const listNumber3 = [];
+        
+            while (evenNumberTwo.length < 3) {
+                const number = createRandomNumbers8();
+                if (number % 2 === 0 && !evenNumberTwo.includes(number)) {
+                    evenNumberTwo.push(number);
+                    listNumber3.push(number);
+                }
+            }
+        
+            while (oddNumberFive.length < 4) {
+                const number = createRandomNumbers8();
+                if (number % 2 !== 0 && !oddNumberFive.includes(number)) {
+                    oddNumberFive.push(number);
+                    listNumber3.push(number);
+                }
+            }
+
+            const result4 = [...evenNumberTwo, ...oddNumberFive];
+
+            for(i = 0; i < listNumber3.length; i++){
+                listDiv82[i].style.backgroundColor = '#FFDEAD';
+                listDiv82[i].style.border = '1px solid black';
+
+                listP8[i].textContent = result4[i];
+
+                      
+                if(result4[i] < 10){
+                    listP8[i].textContent = '0' + result4[i];
+                    
+                }
+
+                if(result4[i] >= 10){
+                    listP8[i].textContent = result4[i];
+                    
+
+                }
+            }
+
+            const resultNumberMonths4 = createRandomNumbersMonths();
+
+            for(i = 0; i < 12; i++){
+                if(resultNumberMonths4 == monthsNumbers[i]){
+                    pMonths.textContent = months[i];
+                }
+            }
+
+            for(i = 0; i <= 31; i++){
+
+                for(a = 0; a <= 31; a++){
+                    if(result4[i] == listNumberThree[a]){
+                        listDiv8[a].style.backgroundColor = '#FFDEAD';
+                    }
+            
+                }
+                    
+            }
+        break;
+
+        //5 números pares 2 números ímpares
+        case 'fiveTwo':              
+            const evenNumberFive = [];
+            const oddNumberTwo = [];
+            const listNumber4 = [];
+        
+            while (evenNumberFive.length < 3) {
+                const number = createRandomNumbers8();
+                if (number % 2 === 0 && !evenNumberFive.includes(number)) {
+                    evenNumberFive.push(number);
+                    listNumber4.push(number);
+                }
+            }
+        
+            while (oddNumberTwo.length < 4) {
+                const number = createRandomNumbers8();
+                if (number % 2 !== 0 && !oddNumberTwo.includes(number)) {
+                    oddNumberTwo.push(number);
+                    listNumber4.push(number);
+                }
+            }
+
+            const result5 = [...evenNumberFive, ...oddNumberTwo];
+
+            for(i = 0; i < listNumber4.length; i++){
+                listDiv82[i].style.backgroundColor = '#FFDEAD';
+                listDiv82[i].style.border = '1px solid black';
+
+                listP8[i].textContent = result5[i];
+
+                      
+                if(result5[i] < 10){
+                    listP8[i].textContent = '0' + result5[i];
+                    
+                }
+
+                if(result5[i] >= 10){
+                    listP8[i].textContent = result5[i];
+                    
+
+                }
+            }
+
+            const resultNumberMonths5 = createRandomNumbersMonths();
+
+            for(i = 0; i < 12; i++){
+                if(resultNumberMonths5 == monthsNumbers[i]){
+                    pMonths.textContent = months[i];
+                }
+            }
+
+            for(i = 0; i <= 31; i++){
+
+                for(a = 0; a <= 31; a++){
+                    if(result5[i] == listNumberThree[a]){
+                        listDiv8[a].style.backgroundColor = '#FFDEAD';
+                    }
+            
+                }
+                    
             }
         break;
 
