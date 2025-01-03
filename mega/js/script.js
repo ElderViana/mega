@@ -372,7 +372,8 @@ const createNumbers3 = () => {
                 }
              }
         break;
-
+        
+        //Caso 3 pares 4 paraes
         case 'threeFour':              
             const evenNumberThree = [];
             const oddNumberFour = [];

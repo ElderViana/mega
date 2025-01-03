@@ -126,6 +126,7 @@ const createNumbers = () => {
 
                 listDiv2[i].style.backgroundColor = '#00CED1';
                 listDiv2[i].style.border = '1px solid black';
+                console.log(listP2)
 
                 if(result1[i] < 10){
                     listP2[i].textContent = '0' + result1[i];
@@ -615,9 +616,9 @@ const createNumbers2 = () => {
 
 //Dia de sorte
 const divFather8 = document.getElementById('divFather8');
-const pMonths = document.getElementById("pMonths");
+const pMonths = document.getElementById("pMonths2");
 const selectFilter8 = document.getElementById('selectFilter8');
-const pFather8 = document.getElementById('pFather4');
+const pFather8 = document.getElementById('pFather8');
 
 
 
@@ -667,18 +668,20 @@ const monthsNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const createElements8 = () => {
 
+
+   
     for( i = 1; i <= 7; i++){
 
         const pChild8 = document.createElement('div');
         const p8 = document.createElement('p8');
 
         pChild8.className = 'pChild';
-        pChild8.id = 'a' + i;
+        pChild8.id = 'y' + i;
      
         listDiv82.push(pChild8);
 
-        p.id = 'c' + i;
-        listP2.push(p8);
+        p8.id = 'n' + i;
+        listP8.push(p8);
 
         pChild8.appendChild(p8);
         pFather8.appendChild(pChild8);
@@ -688,8 +691,8 @@ const createElements8 = () => {
 
 
 
-
 }
+
 
 
 const createRandomNumbers8 = () => Math.floor(Math.random() * 31) + 1;
@@ -697,9 +700,12 @@ const createRandomNumbersMonths = () => Math.floor(Math.random() * 12) + 1;
 
 const createNumbers3 = () => {
 
-    let submit8 = document.querySelector('#submit8');
-    submit8.value = "Limpar";
 
+    
+
+    let submit8 = document.querySelector('#submit8');
+   
+    submit8.value = "Limpar";
 
     const clean = (event) => {
         
@@ -714,40 +720,53 @@ const createNumbers3 = () => {
     document.querySelector('#submit8').addEventListener('click', clean);
 
 
-   //let selectFilter5 = selectFilter8.value
-   //localStorage.setItem('selectFilter8', JSON.stringify(selectFilter5));
+    let  selectFilter8 = document.getElementById('selectFilter8');
+    console.log(selectFilter8.value)
+  
 
-   
+   let selectFilter5 = selectFilter8.value
+   localStorage.setItem('selectFilter8', JSON.stringify(selectFilter5));
+
    switch(selectFilter8.value){
 
         //7 númeroa aleatórios
         case '' || 'seven':                           
             const SevenNumber = [];
+          
             while (SevenNumber.length < 7) {
 
                 const number = createRandomNumbers8();
-            if(!SevenNumber.includes(number)){
-                SevenNumber.push(number);
-            }
+                if(!SevenNumber.includes(number)){
+                    SevenNumber.push(number);
+            
+                }
             }
 
-            const result1 = SevenNumber;
-            for(i = 0; i < SevenNumber.length; i++){
-                listDiv82[i].style.backgroundColor = '#DAA520';
-                listDiv82[i].style.border = '1px solid black';
+            let result1 = SevenNumber;
+          
+            for(k = 0; k < 7; k++){
+                listDiv82[k].style.backgroundColor = '#FFDEAD';
+                listDiv82[k].style.border = '1px solid black';
+
+               
+     
                 
-                if(result1[i] < 10){
-                    listP8[i].textContent = '0' + result1[i];
+                if(result1[k] < 10){
+                    listP8[k].textContent = '0' + result1[k];
+                    
                 }
 
-                if(result1[i] >= 10){
-                    listP8[i].textContent = result1[i];
+                if(result1[k] >= 10){
+                    listP8[k].textContent = result1[k];
+                    console.log('oi')
 
                 }
             }
-
+                console.log(listDiv82)
+         
             const resultNumberMonths1 = createRandomNumbersMonths() 
             for(i = 0; i < 12; i++){
+               
                 if(resultNumberMonths1 == monthsNumbers[i]){
                     pMonths.textContent = months[i];
                 }
@@ -758,11 +777,51 @@ const createNumbers3 = () => {
 
                 for(a = 0; a <= 31; a++){
                     if(result1[i] == listNumberThree[a]){
-                        listDiv8[a].style.backgroundColor = '#d629d6';
+                        listDiv8[a].style.backgroundColor = '#FFDEAD';
                     }
             
                 }
                     
+            }
+        break;
+
+
+
+        //Caso 3 pares 4 paraes
+        case 'threeFour':              
+            const evenNumberThree = [];
+            const oddNumberFour = [];
+            const listNumber1 = [];
+        
+            while (evenNumberThree.length < 3) {
+                const number = createRandomNumbers3();
+                if (number % 2 === 0 && !evenNumberThree.includes(number)) {
+                    evenNumberThree.push(number);
+                    listNumber1.push(number);
+                }
+            }
+        
+            while (oddNumberFour.length < 4) {
+                const number = createRandomNumbers3();
+                if (number % 2 !== 0 && !oddNumberFour.includes(number)) {
+                    oddNumberFour.push(number);
+                    listNumber1.push(number);
+                }
+            }
+
+            const result2 = [...evenNumberThree, ...oddNumberFour];
+
+            for(i = 0; i < listNumber1.length; i++){
+                listDiv3[i].style.backgroundColor = '#DAA520';
+                listP3[i].textContent = result2[i];
+            }
+
+            const resultNumberMonths2 = createRandomNumbersMonths();
+
+            for(i = 0; i < 12; i++){
+                if(resultNumberMonths2 == monthsNumbers[i]){
+                    pMonths.textContent = months[i];
+                }
             }
         break;
 
@@ -804,6 +863,7 @@ const createNumbers3 = () => {
 const select = () => {
      document.getElementById('selectFilter11').value =  JSON.parse(localStorage.getItem('selectFilter'));
      document.getElementById('selectFilter7').value =  JSON.parse(localStorage.getItem('selectFilter7'));
+     document.getElementById('selectFilter8').value =  JSON.parse(localStorage.getItem('selectFilter8'));
         
 }
 
@@ -817,11 +877,10 @@ const init = () => {
     createElements7();
     createGame7();
     createGame8();
+    createElements8();
    
            
 }
 
 init()
 
-
-    
