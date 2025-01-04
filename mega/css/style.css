@@ -209,3 +209,18 @@ h2 {
  {
     background-color: #dfc480;
 }
+
+.link {
+    font-size: 20px;
+    
+    color: black;
+    border-radius: 10px;
+    padding: 1px 10px 1px 10px;
+    margin-left: 1300px;
+    position: sticky;
+    top: 0;
+    text-shadow: 2px 2px 5px blue;
+    text-decoration: none;
+    box-shadow: 0 2px 4px 0 rgb(98, 154, 173), 0 3px 10px 0 rgb(28, 106, 133);
+   
+}

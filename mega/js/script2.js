@@ -449,10 +449,11 @@ const createNumbers2 = () => {
         }
 
         for(i = 0; i <= 25; i++){
-
             for(a = 0; a <= 25; a++){
                 if(result1[i] == listNumberTwo[a]){
-                    listDiv7[a].style.backgroundColor = '#d629d6';
+                    listDiv7[a].style.backgroundColor = '#e6aecb';
+                   
+                 
                 }
         
             }
@@ -553,7 +554,7 @@ const createNumbers2 = () => {
 
                 for(a = 0; a <= 25; a++){
                     if(result3[i] == listNumberTwo[a]){
-                        listDiv7[a].style.backgroundColor = '#e6aecb';
+                        listDiv7[a].style.backgroundColor = '#e6aecb'; 
                     }
             
                 }
