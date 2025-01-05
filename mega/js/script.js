@@ -705,3 +705,72 @@ submit2.addEventListener('click', createThreeEvenThreeOdd);
 submit3.addEventListener('click', createFourEvenTwoOdd);
 submit4.addEventListener('click', createTwoEvenFourOdd);
 */
+
+/*
+  A estratégia de cliente usada aqui é a de cliente estático (arquivos após o build do app React).
+*/
+
+const express = require("express"); //pacote que trabalha com a infraestrutura de servidor
+const passport = require("passport"); //trabalha com a autenticação
+const { configurarApp } = require("./configuracoes/app");
+const { configurarPassport } = require("./configuracoes/passport");
+const { knex } = require("./banco/db");
+const app = express();
+const port = process.env.PORT || 21147;
+const path = require("path");
+const { loginAuth } = require("./endpoints/loginAuth");
+const { endpointsCrud } = require("./endpoints/crud");
+
+// process.on("uncaughtException", (err) => {
+//   console.error("Uncaught Exception:", err);
+//   // Opcional: Aguarde ou registre antes de reiniciar
+//   process.exit(1); // O PM2 ou Nodemon reiniciará o processo
+// });
+
+// process.on("unhandledRejection", (reason, promise) => {
+//   console.error("Unhandled Rejection:", reason);
+//   process.exit(1); // O PM2 ou Nodemon reiniciará o processo
+// });
+
+configurarApp(app, passport, express);
+
+app.get("/testando", async (req, res, next) => {
+  res.json({
+    success: true,
+    mensagem: "Teste bem-sucedido!",
+  });
+});
+
+configurarPassport(passport);
+
+//rotas de login e autenticação - --
+loginAuth(app, passport);
+
+endpointsCrud(app);
+
+// //configurando a liberação de arquivos estáticos (como fotos)
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
+//app.listen inicializa o servidor na porta especificada
+app.listen(port, () => {
+  console.log(`Servidor está rodando na porta ${port}`);
+});
+
+
+# BEGIN WordPress
+# As diretrizes (linhas) entre "BEGIN WordPress" e "END WordPress" são
+# geradas dinamicamente e só devem ser modificadas através de filtros do WordPress.
+# Quaisquer alterações nas diretivas entre esses marcadores serão sobrescritas.
+ 
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+# END WordPress
+
+<FilesMatch "^(wp-login|xmlrpc)\.php$">
+    Order Deny,Allow
+    Allow from All
+</FilesMatch> 

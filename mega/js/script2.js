@@ -1099,3 +1099,23 @@ const init = () => {
 
 init()
 
+
+
+// Função construtora para criar objetos do tipo Pessoa
+function Pessoa(nome, idade) {
+    this.nome = nome; // Propriedade 'nome'
+    this.idade = idade; // Propriedade 'idade'
+
+    // Método para apresentar a pessoa
+    this.apresentar = function () {
+        return `Olá, meu nome é ${this.nome} e eu tenho ${this.idade} anos.`;
+    };
+}
+
+// Criando uma nova instância de Pessoa
+const pessoa1 = new Pessoa("Ana", 25);
+const pessoa2 = new Pessoa("Carlos", 30);
+
+// Usando os métodos da instância
+console.log(pessoa1.apresentar()); // "Olá, meu nome é Ana e eu tenho 25 anos."
+console.log(pessoa2.apresentar()); // "Olá, meu nome é Carlos e eu tenho 30 anos."
